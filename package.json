@@ -1,0 +1,39 @@
+{
+  "name": "@statussync.dev/sdk",
+  "version": "1.0.0",
+  "description": "Statussync Node.JS SDK",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run build:tsup",
+    "build:tsup": "tsup --dts-resolve",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
+}
