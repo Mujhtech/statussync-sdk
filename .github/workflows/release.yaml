@@ -31,6 +31,12 @@ jobs:
       - name: 📥 Download deps
         run: pnpm install --frozen-lockfile
 
+      - name: Creating .npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
+
       - name: 🔐 Setup npm auth
         run: |
           echo "registry=https://registry.npmjs.org" >> ~/.npmrc
