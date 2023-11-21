@@ -29,7 +29,12 @@
     "changeset:beta": "changeset pre enter beta",
     "changeset:normal": "changeset pre exit"
   },
-  "keywords": [],
+  "keywords": [
+    "statussync",
+    "uptime",
+    "incident",
+    "mujhtech"
+  ],
   "author": "",
   "engines": {
     "node": ">=18.0.0"
